@@ -41,21 +41,22 @@
                     
                     $submenus = menu::subMenus($menu->id);
                     // var_dump((bool)$submenus);
+                
                     if($submenus){
                         
                         
                         foreach ($submenus as $submenu){  
                             
                             $submenus = menu::subMenus($menu->id);
-                            // var_dump((bool)$submenus);
                             if(!$submenus){
                             // echo ("<a class='nav-link dropdown-item'  id='".$menu->id."' href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."' data-toggle='dropdown'>".($submenu->name)."</a>");
-                            echo ("<a class='nav-link dropdown-toggle' href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."'>".
+                                
+                            echo ("<a class='nav-link dropdown-toggle' href='?controller=menus&action=general&menu=". $submenu->name . "' id='".$menu->id."'>".
                             $submenu->name.
                                 "</a>");
                             }else{
                                 // echo ("<a class='nav-link dropdown-item'  href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."' data-toggle='dropdown'>".($submenu->name)."</a>");
-                                echo ("<a class='nav-link dropdown-toggle' href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."'>".
+                                echo ("<a class='nav-link dropdown-toggle' href='?controller=menus&action=general&menu=". $submenu->name . "' id='".$submenu->id."'>".
                                 $submenu->name.
                                 "</a>");
                             }

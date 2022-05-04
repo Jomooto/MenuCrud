@@ -87,6 +87,7 @@
             foreach($sql->fetchAll() as $menu){
                 $listMenu[] = new menu($menu['id'], $menu['name'], $menu['father_id'], $menu['description']);
             }
+
             
 
             // var_dump($listMenu);
