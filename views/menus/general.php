@@ -1,1 +1,1 @@
-<h2> Este es un menu de  <?=$menu ?></h2>
+<h2> Esta es una vista  de  <?= $menus ?></h2>

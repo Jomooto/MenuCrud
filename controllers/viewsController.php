@@ -10,7 +10,7 @@
 
     class Views{
 
-        static function redirect($page, $menu='', $existentes = null) {
+        static function redirect($page, $menu=null, $existentes = null) {
             $menus = $menu;
             $existentes = $existentes;
             include_once("./views/menus/$page.php");

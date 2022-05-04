@@ -19,12 +19,12 @@
                                 $submenus = menu::subMenus($menu->id);
                             // var_dump((bool)$submenus);
                             if(!$submenus){
-                            echo ("<a class='nav-link dropdown-toggle' href='?controller=menus&action=general&menu='". $menu->name . "' id='".$menu->id."'>".
+                            echo ("<a class='nav-link dropdown-toggle' href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."'>".
                             
                                 $menu->name.
                             "</a>");
                             }else{
-                                echo ("<a class='nav-link dropdown-toggle dropdown-toggle-split' href='#'  data-toggle='dropdown'>".
+                                echo ("<a class='nav-link dropdown-toggle dropdown-toggle-split' href='?controller=menus&action=general&menu=". $menu->name . "' data-toggle='dropdown'>".
                                 
                                     $menu->name.
                                 "</a>");
@@ -49,9 +49,15 @@
                             $submenus = menu::subMenus($menu->id);
                             // var_dump((bool)$submenus);
                             if(!$submenus){
-                            echo ("<a class='nav-link dropdown-item'  id='".$menu->id."' href='?controller=menu&action=general' data-toggle='dropdown'>".($submenu->name)."</a>");
+                            // echo ("<a class='nav-link dropdown-item'  id='".$menu->id."' href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."' data-toggle='dropdown'>".($submenu->name)."</a>");
+                            echo ("<a class='nav-link dropdown-toggle' href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."'>".
+                            $submenu->name.
+                                "</a>");
                             }else{
-                                echo ("<a class='nav-link dropdown-item'  href='#' data-toggle='dropdown'>".($submenu->name)."</a>");
+                                // echo ("<a class='nav-link dropdown-item'  href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."' data-toggle='dropdown'>".($submenu->name)."</a>");
+                                echo ("<a class='nav-link dropdown-toggle' href='?controller=menus&action=general&menu=". $menu->name . "' id='".$menu->id."'>".
+                                $submenu->name.
+                                "</a>");
                             }
 
                             // echo 'hijo =>'. ($submenu->id) . '<br>';

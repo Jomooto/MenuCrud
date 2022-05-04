@@ -16,7 +16,7 @@
         }
 
         function general($menu){
-
+            $menu = $menu;
             Views::redirect('general', $menu);
         }
 

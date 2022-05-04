@@ -61,4 +61,9 @@
             Views::redirect('inicio', $menu);
         }
 
+        public function general(){
+            $name = $_GET['menu'];
+            Views::redirect('general', $name);
+        }
+
     }
